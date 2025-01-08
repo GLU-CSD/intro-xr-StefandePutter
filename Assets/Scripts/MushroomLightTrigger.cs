@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class MushroomLightTrigger : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Light mushroomLight;
+
+    void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Player")) // Geef de XR Rig de tag "Player"
+        {
+            mushroomLight.enabled = true;
+            Debug.Log("Licht aan");
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerExit(Collider other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            mushroomLight.enabled = false;
+            Debug.Log("Licht uit");
+        }
     }
 }
