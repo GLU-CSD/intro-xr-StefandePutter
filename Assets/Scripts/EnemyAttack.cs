@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-    public float damageAmount = 10f;
-    public float attackCooldown = 2f;
+    [SerializeField] private float damageAmount = 10f;
+    [SerializeField] private float attackCooldown = 2f;
     private float lastAttackTime;
 
     private Health baseHealth;

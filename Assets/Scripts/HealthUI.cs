@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HealthUI : MonoBehaviour
 {
-    public string prefabTag = "Enemy";
+    [SerializeField] private string prefabTag = "Enemy";
     private Health healthScript;
 
     private void Update()

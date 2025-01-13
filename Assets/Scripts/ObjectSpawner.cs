@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ObjectSpawner : MonoBehaviour
 {
-    public GameObject objectToSpawn;
-    public float spawnInterval = 5f;
+    [SerializeField] private GameObject objectToSpawn;
+    [SerializeField] private float spawnInterval = 5f;
     private float lastSpawnTime;
 
     // Update is called once per frame
