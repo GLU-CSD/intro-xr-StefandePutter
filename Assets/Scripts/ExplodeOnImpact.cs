@@ -3,20 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class ExplodeOnImpact : MonoBehaviour
+public class ExplodeOnImpact : Projectile
 {
     [SerializeField] private float explosionForce = 500f;      // Kracht van de explosie
     [SerializeField] private float explosionRadius = 5f;       // Radius van de explosie
-    [SerializeField] private float damage = 50f;
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Enemy")) // Zorg dat vijanden de tag "Enemy" hebben
-        {
-            Explode();
-            Destroy(gameObject); // Verwijder het object na de explosie
-        }
-    }
 
     void Explode()
     {
@@ -41,5 +31,6 @@ public class ExplodeOnImpact : MonoBehaviour
                 }
             }            
         }
+        Destroy(gameObject);
     }
 }

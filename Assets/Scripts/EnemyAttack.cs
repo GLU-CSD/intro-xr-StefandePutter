@@ -33,7 +33,7 @@ public class EnemyAttack : MonoBehaviour
         {
             baseHealth.TakeDamage(damageAmount);
             lastAttackTime = Time.time;
-            Debug.Log(this.name + "attacked the base!");
+            //Debug.Log(this.name + "attacked the base!");
         }
     }
 }

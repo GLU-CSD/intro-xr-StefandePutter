@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class TowerGrenade : MonoBehaviour
 {
-    [SerializeField] private GameObject towerPrefab;
+    [SerializeField] public GameObject towerPrefab;
 
     void OnCollisionEnter(Collision collision)
     {

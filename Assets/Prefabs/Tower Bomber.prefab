@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5097311710460149670
+--- !u!1 &2260004364760960074
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,7 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8961096065591998269}
+  - component: {fileID: 768526085413475059}
   m_Layer: 8
   m_Name: FirePoint
   m_TagString: Untagged
@@ -16,22 +16,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8961096065591998269
+--- !u!4 &768526085413475059
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5097311710460149670}
+  m_GameObject: {fileID: 2260004364760960074}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7429994916613028744}
+  m_Father: {fileID: 6320153292023740238}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &7429994916612890888
+--- !u!1001 &6320153292023344590
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -41,7 +41,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 528711f9e1d1c439184e6c01ee3e3869, type: 3}
       propertyPath: m_Name
-      value: Tower
+      value: Tower (1)
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 528711f9e1d1c439184e6c01ee3e3869, type: 3}
       propertyPath: m_Layer
@@ -61,7 +61,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 528711f9e1d1c439184e6c01ee3e3869, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 626.06
+      value: 615.22
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 528711f9e1d1c439184e6c01ee3e3869, type: 3}
       propertyPath: m_LocalPosition.y
@@ -112,30 +112,30 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 400000, guid: 528711f9e1d1c439184e6c01ee3e3869, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8961096065591998269}
+      addedObject: {fileID: 768526085413475059}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 528711f9e1d1c439184e6c01ee3e3869, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6163393022810936515}
+      addedObject: {fileID: 4591604519841867980}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 528711f9e1d1c439184e6c01ee3e3869, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1500663301234508966}
+      addedObject: {fileID: 7112166587565965543}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 528711f9e1d1c439184e6c01ee3e3869, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6029814685916623129}
+      addedObject: {fileID: 2393789694756890920}
   m_SourcePrefab: {fileID: 100100000, guid: 528711f9e1d1c439184e6c01ee3e3869, type: 3}
---- !u!1 &7429994916612859816 stripped
+--- !u!1 &6320153292023311214 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 528711f9e1d1c439184e6c01ee3e3869, type: 3}
-  m_PrefabInstance: {fileID: 7429994916612890888}
+  m_PrefabInstance: {fileID: 6320153292023344590}
   m_PrefabAsset: {fileID: 0}
---- !u!135 &6163393022810936515
+--- !u!135 &4591604519841867980
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7429994916612859816}
+  m_GameObject: {fileID: 6320153292023311214}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -150,13 +150,13 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 22
   m_Center: {x: 0, y: 5.1, z: 0}
---- !u!114 &1500663301234508966
+--- !u!114 &7112166587565965543
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7429994916612859816}
+  m_GameObject: {fileID: 6320153292023311214}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b4cc2b1fe345bf342843576e6dc9cec7, type: 3}
@@ -165,14 +165,14 @@ MonoBehaviour:
   fireRate: 1
   damage: 50
   projectilePrefab: {fileID: 700251564001870041, guid: 9a8274ec1801a234f9249c1786eb8615, type: 3}
-  firePoint: {fileID: 8961096065591998269}
---- !u!208 &6029814685916623129
+  firePoint: {fileID: 768526085413475059}
+--- !u!208 &2393789694756890920
 NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7429994916612859816}
+  m_GameObject: {fileID: 6320153292023311214}
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
@@ -182,8 +182,8 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 6.2780004, z: 0.238}
   m_TimeToStationary: 0.5
---- !u!4 &7429994916613028744 stripped
+--- !u!4 &6320153292023740238 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 528711f9e1d1c439184e6c01ee3e3869, type: 3}
-  m_PrefabInstance: {fileID: 7429994916612890888}
+  m_PrefabInstance: {fileID: 6320153292023344590}
   m_PrefabAsset: {fileID: 0}

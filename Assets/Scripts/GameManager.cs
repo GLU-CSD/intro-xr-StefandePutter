@@ -31,7 +31,6 @@ public class GameManager : MonoBehaviour
             if (scoreTimer >= 1f) // Verhoog de score elke seconde
             {
                 score++;
-                Debug.Log(score);
                 scoreText.text = "Score: " + score;
                 scoreTimer = 0f; // Reset de timer
             }
