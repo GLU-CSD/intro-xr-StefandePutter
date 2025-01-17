@@ -48,9 +48,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8595241961049308731, guid: 72f60e218759111469da3e2f819e3eac, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -4939477649300804942, guid: 72f60e218759111469da3e2f819e3eac, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -1056986225615092837, guid: 72f60e218759111469da3e2f819e3eac, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 191415605963124969, guid: 72f60e218759111469da3e2f819e3eac, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 72f60e218759111469da3e2f819e3eac, type: 3}
       propertyPath: m_Name
       value: Projectile Grenade
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 72f60e218759111469da3e2f819e3eac, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251230509781935167, guid: 72f60e218759111469da3e2f819e3eac, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315326708555903726, guid: 72f60e218759111469da3e2f819e3eac, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7036213049465896255, guid: 72f60e218759111469da3e2f819e3eac, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513859187771203891, guid: 72f60e218759111469da3e2f819e3eac, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -65,9 +101,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 72f60e218759111469da3e2f819e3eac, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7176394703257861177}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 72f60e218759111469da3e2f819e3eac, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6765721793724543449}
   m_SourcePrefab: {fileID: 100100000, guid: 72f60e218759111469da3e2f819e3eac, type: 3}
 --- !u!1 &3870876025372762211 stripped
 GameObject:
@@ -91,7 +124,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.11871338
   m_Height: 0.467036
@@ -119,7 +152,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -136,20 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2574ef5121b15ae4687a1101ddae39ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
+  damage: 50
   explosionForce: 500
   explosionRadius: 5
-  damage: 50
---- !u!114 &6765721793724543449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3870876025372762211}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68241743d4f792542a9da0f1c17b47d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  damage: 0

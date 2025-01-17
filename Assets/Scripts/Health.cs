@@ -8,12 +8,15 @@ public class Health : MonoBehaviour
 {
     [SerializeField] internal float maxHealth = 100f;
     // public so you can check if its dead
+    [HideInInspector] public bool isDead; // if incoming damage is enough to kill enemy isDead
+
     public float currentHealth;
     [SerializeField] internal Image healthbarFill;
 
     private void Start()
     {
         currentHealth = maxHealth;
+        isDead = false;
         UpdateHealthBar();
     }
 
@@ -31,6 +34,7 @@ public class Health : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            isDead = true;
             NavMeshAgent agent = gameObject.GetComponent<NavMeshAgent>();
             if (agent != null)
             {

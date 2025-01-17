@@ -41,7 +41,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 528711f9e1d1c439184e6c01ee3e3869, type: 3}
       propertyPath: m_Name
-      value: Tower (1)
+      value: Tower Bomber
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 528711f9e1d1c439184e6c01ee3e3869, type: 3}
       propertyPath: m_Layer
@@ -61,7 +61,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 528711f9e1d1c439184e6c01ee3e3869, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 615.22
+      value: 615.77
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 528711f9e1d1c439184e6c01ee3e3869, type: 3}
       propertyPath: m_LocalPosition.y
@@ -69,7 +69,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 528711f9e1d1c439184e6c01ee3e3869, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 312.42
+      value: 310.99
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 528711f9e1d1c439184e6c01ee3e3869, type: 3}
       propertyPath: m_LocalRotation.w
@@ -107,6 +107,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 85e468039331a4d609ea8cde74cce2bb, type: 2}
+    - target: {fileID: 3300000, guid: 528711f9e1d1c439184e6c01ee3e3869, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 6e712a2ef02ee40b19cfa622703e6ee9, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -122,7 +126,7 @@ PrefabInstance:
       addedObject: {fileID: 7112166587565965543}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 528711f9e1d1c439184e6c01ee3e3869, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2393789694756890920}
+      addedObject: {fileID: 4559774472732683950}
   m_SourcePrefab: {fileID: 100100000, guid: 528711f9e1d1c439184e6c01ee3e3869, type: 3}
 --- !u!1 &6320153292023311214 stripped
 GameObject:
@@ -164,9 +168,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireRate: 1
   damage: 50
-  projectilePrefab: {fileID: 700251564001870041, guid: 9a8274ec1801a234f9249c1786eb8615, type: 3}
+  projectilePrefab: {fileID: 3870876025372762211, guid: e6ae88fe918155c478dc57edd2297324, type: 3}
   firePoint: {fileID: 768526085413475059}
---- !u!208 &2393789694756890920
+--- !u!208 &4559774472732683950
 NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,11 +180,11 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 3.4020002, y: 6.2980003, z: 3.752}
+  m_Extents: {x: 4.274, y: 3.2570002, z: 4.274}
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 6.2780004, z: 0.238}
+  m_Center: {x: 0, y: 3.2200003, z: 0}
   m_TimeToStationary: 0.5
 --- !u!4 &6320153292023740238 stripped
 Transform:

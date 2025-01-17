@@ -27,13 +27,14 @@ public class Projectile : MonoBehaviour
         transform.LookAt(target.position, Vector3.up);
         transform.Rotate(-90,0,0);
 
-        if (Vector3.Distance(transform.position, target.position) < 0.2f)
+        if (Vector3.Distance(transform.position, target.position) < 0.4f)
         {
             Explode();
         }
     }
 
-    void Explode()
+    // vertual so it can be overwritten by other towers
+    internal virtual void Explode()
     {
         // Zoek Health component van target met GetComponent
         // Als Health script gevonden is, gebruik TakeDamage functie

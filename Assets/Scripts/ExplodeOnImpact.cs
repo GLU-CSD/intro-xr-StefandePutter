@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using static UnityEngine.GraphicsBuffer;
 
 public class ExplodeOnImpact : Projectile
 {
     [SerializeField] private float explosionForce = 500f;      // Kracht van de explosie
     [SerializeField] private float explosionRadius = 5f;       // Radius van de explosie
 
-    void Explode()
+    internal override void Explode()
     {
         // Vind alle objecten in de buurt van de explosie
         Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius);
@@ -17,7 +18,7 @@ public class ExplodeOnImpact : Projectile
             if (nearbyObject.CompareTag("Enemy"))
             {
                 // Get Health for enemies
-                Health healthScript = nearbyObject.GetComponent<Health>();
+                EnemyHealth healthScript = nearbyObject.GetComponent<EnemyHealth>();
                 if (healthScript != null)
                 {
                     healthScript.TakeDamage(damage);
