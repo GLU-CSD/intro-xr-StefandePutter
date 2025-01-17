@@ -9,6 +9,7 @@ public class TowerAttack : MonoBehaviour
     [SerializeField] private float damage = 50f;
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private Transform firePoint;
+    [SerializeField] private bool fireFirstEnemy = false;
     private Transform baseTransform;
 
     private float nextFireTime = 0f;
@@ -16,7 +17,13 @@ public class TowerAttack : MonoBehaviour
 
     private void Start()
     {
-        baseTransform = GameObject.FindGameObjectWithTag("Base").transform;
+        if (fireFirstEnemy)
+        {
+            baseTransform = GameObject.FindGameObjectWithTag("Base").transform;
+        } else
+        {
+            baseTransform = transform;
+        }
     }
 
     void OnTriggerEnter(Collider other)

@@ -28,7 +28,7 @@ public class ExplodeOnImpact : Projectile
                 Rigidbody rb = nearbyObject.GetComponent<Rigidbody>();
                 if (rb != null)
                 {
-                    rb.AddExplosionForce(explosionForce, transform.position, explosionRadius);
+                    //rb.AddExplosionForce(explosionForce, transform.position, explosionRadius);
                 }
             }            
         }
