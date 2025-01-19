@@ -8,13 +8,17 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField] private float attackCooldown = 2f;
     private float lastAttackTime;
 
-    private Health baseHealth;
+    private IDamageable baseHealth;
     
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Base"))
         {
-            baseHealth = collision.gameObject.GetComponent<Health>();
+            baseHealth = collision.gameObject.GetComponent<IDamageable>();
+            if (baseHealth != null)
+            {
+                baseHealth = collision.gameObject.GetComponent<Health>();
+            }
         }
     }
 

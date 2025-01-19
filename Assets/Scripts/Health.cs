@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 
-public class Health : MonoBehaviour
+public class Health : MonoBehaviour, IDamageable
 {
     [SerializeField] internal float maxHealth = 100f;
     // public so you can check if its dead

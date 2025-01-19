@@ -58,7 +58,6 @@ public class TowerAttack : MonoBehaviour
     void Shoot(Transform target)
     {
         target.gameObject.GetComponent<EnemyHealth>().GhostDamage(damage);
-        // https://learn.unity.com/tutorial/interfaces#
         GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
         projectile.GetComponent<Projectile>().SetTarget(target);
         projectile.GetComponent<Projectile>().damage = damage;

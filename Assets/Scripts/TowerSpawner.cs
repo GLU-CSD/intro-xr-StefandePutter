@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SpawnObject : MonoBehaviour
+public class TowerSpawner : MonoBehaviour
 {
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private GameObject throwTower;

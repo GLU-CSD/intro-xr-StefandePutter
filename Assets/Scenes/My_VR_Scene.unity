@@ -547,8 +547,8 @@ GameObject:
   m_Component:
   - component: {fileID: 252215746}
   - component: {fileID: 252215747}
-  - component: {fileID: 252215748}
   - component: {fileID: 252215749}
+  - component: {fileID: 252215750}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameController
@@ -565,7 +565,7 @@ Transform:
   m_GameObject: {fileID: 252215745}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 687.25336, y: -85.72806, z: -186.37022}
+  m_LocalPosition: {x: 687, y: -85.72806, z: -186.37022}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -585,20 +585,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 832931046}
   gameOverUI: {fileID: 302817952}
---- !u!114 &252215748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 252215745}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebc0614757c4854419c1f4aaf3c757cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  towerGrenade: {fileID: 346888830138181438, guid: 5d7d4dd4c2aec5645a89af096dffb4b6, type: 3}
-  interactionManager: {fileID: 139200558}
 --- !u!114 &252215749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -612,9 +598,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 1737077459}
-  throwTower: {fileID: 0}
+  throwTower: {fileID: 346888830138181438, guid: 5d7d4dd4c2aec5645a89af096dffb4b6, type: 3}
   towers:
-  - {fileID: 346888830138181438, guid: 5d7d4dd4c2aec5645a89af096dffb4b6, type: 3}
+  - {fileID: 7429994916612859816, guid: ee6b930c952adca42a643fa20ab71932, type: 3}
+  - {fileID: 6320153292023311214, guid: 9c5bcce4ce965344da6f51e008ab8cf1, type: 3}
+--- !u!114 &252215750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252215745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b375931d8436634fb6f1fca21fa1c07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RayInteractor: {fileID: 364578164}
+  tower: {fileID: 6320153292023311214, guid: 9c5bcce4ce965344da6f51e008ab8cf1, type: 3}
 --- !u!1 &252224833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1827,7 +1828,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1035475980}
+      - m_Target: {fileID: 252215749}
         m_TargetAssemblyTypeName: SpawnObject, Assembly-CSharp
         m_MethodName: SpawnTower
         m_Mode: 1
@@ -2320,7 +2321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3600,7 +3601,6 @@ GameObject:
   - component: {fileID: 1035475977}
   - component: {fileID: 1035475976}
   - component: {fileID: 1035475975}
-  - component: {fileID: 1035475980}
   m_Layer: 5
   m_Name: WaveWonCanvas
   m_TagString: Untagged
@@ -3713,23 +3713,6 @@ RectTransform:
   m_AnchoredPosition: {x: 621.4, y: 10}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1035475980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1035475974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0af69a4cf03f16b4abd9056cbd62b5aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 1737077459}
-  throwTower: {fileID: 346888830138181438, guid: 5d7d4dd4c2aec5645a89af096dffb4b6, type: 3}
-  towers:
-  - {fileID: 7429994916612859816, guid: ee6b930c952adca42a643fa20ab71932, type: 3}
-  - {fileID: 6320153292023311214, guid: 9c5bcce4ce965344da6f51e008ab8cf1, type: 3}
 --- !u!1 &1298044839
 GameObject:
   m_ObjectHideFlags: 0
@@ -3790,7 +3773,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 039f9773181c246efa2787ec4c688d10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4898,7 +4881,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1035475980}
+      - m_Target: {fileID: 252215749}
         m_TargetAssemblyTypeName: SpawnObject, Assembly-CSharp
         m_MethodName: SpawnTower
         m_Mode: 1
@@ -5030,7 +5013,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1035475980}
+      - m_Target: {fileID: 252215749}
         m_TargetAssemblyTypeName: SpawnObject, Assembly-CSharp
         m_MethodName: SpawnTower
         m_Mode: 1
@@ -5651,7 +5634,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1964150921401654020, guid: 2dfdcefc4106d9048a2e574bb1854672, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 621.71
+      value: 620.63
       objectReference: {fileID: 0}
     - target: {fileID: 1964150921401654020, guid: 2dfdcefc4106d9048a2e574bb1854672, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5659,11 +5642,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1964150921401654020, guid: 2dfdcefc4106d9048a2e574bb1854672, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 326.4
+      value: 325.01
       objectReference: {fileID: 0}
     - target: {fileID: 1964150921401654020, guid: 2dfdcefc4106d9048a2e574bb1854672, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: -0.035771642
       objectReference: {fileID: 0}
     - target: {fileID: 1964150921401654020, guid: 2dfdcefc4106d9048a2e574bb1854672, type: 3}
       propertyPath: m_LocalRotation.x
@@ -5671,11 +5654,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1964150921401654020, guid: 2dfdcefc4106d9048a2e574bb1854672, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0.99936
       objectReference: {fileID: 0}
     - target: {fileID: 1964150921401654020, guid: 2dfdcefc4106d9048a2e574bb1854672, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1964150921401654020, guid: 2dfdcefc4106d9048a2e574bb1854672, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5683,7 +5666,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1964150921401654020, guid: 2dfdcefc4106d9048a2e574bb1854672, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 184.1
       objectReference: {fileID: 0}
     - target: {fileID: 1964150921401654020, guid: 2dfdcefc4106d9048a2e574bb1854672, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z

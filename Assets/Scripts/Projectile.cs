@@ -40,7 +40,7 @@ public class Projectile : MonoBehaviour
         // Als Health script gevonden is, gebruik TakeDamage functie
         // Gebruik damage variable
         // Instantiate eventuele effecten
-        target.GetComponent<Health>().TakeDamage(damage);
+        target.GetComponent<IDamageable>().TakeDamage(damage);
         Destroy(gameObject);
     }
 }

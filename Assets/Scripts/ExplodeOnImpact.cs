@@ -18,7 +18,7 @@ public class ExplodeOnImpact : Projectile
             if (nearbyObject.CompareTag("Enemy"))
             {
                 // Get Health for enemies
-                EnemyHealth healthScript = nearbyObject.GetComponent<EnemyHealth>();
+                IDamageable healthScript = nearbyObject.GetComponent<IDamageable>();
                 if (healthScript != null)
                 {
                     healthScript.TakeDamage(damage);
