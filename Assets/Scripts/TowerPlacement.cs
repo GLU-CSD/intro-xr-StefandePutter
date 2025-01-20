@@ -31,19 +31,8 @@ public class TowerPlacement : MonoBehaviour
         if (hit.collider != null)
         {
             if (hit.collider.CompareTag("Terrain")) {
-                if (placedTower == null)
-                {
-                    placedTower = Instantiate(tower, hit.point, Quaternion.identity);
-                    TowerMat = placedTower.GetComponent<MeshRenderer>().material;
-
-                    int LayerIgnoreRaycast = LayerMask.NameToLayer("Ignore Raycast");
-                    placedTower.layer = LayerIgnoreRaycast; // set layer to ignore raycast
-
-                    placedTower.GetComponent<MeshRenderer>().material = unsetMat;
-                } else
-                {
-                    placedTower.transform.position = hit.point;
-                }
+                placedTower.transform.position = hit.point;
+                
             }
         }
     }
