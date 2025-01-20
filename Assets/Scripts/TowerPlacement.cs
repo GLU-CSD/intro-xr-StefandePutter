@@ -15,7 +15,7 @@ public class TowerPlacement : MonoBehaviour
     private Material TowerMat;
     private Vector3 oldPos;
     private bool placingTower;
-    private bool newTower;
+    private bool placingNewTower;
 
     // Update is called once per frame
     void Update()
@@ -50,7 +50,7 @@ public class TowerPlacement : MonoBehaviour
 
     public void SetTower(GameObject go)
     {
-        newTower = true;
+        placingNewTower = true;
 
         placedTower = Instantiate(go);
 
@@ -93,10 +93,10 @@ public class TowerPlacement : MonoBehaviour
             Vector3 position;
 
             GameObject go = args.interactableObject.transform.gameObject;
-            if (go.CompareTag("Terrain"))
+            if (go.CompareTag("Terrain") || placingNewTower)
             {
                 position = placedTower.transform.position;
-            } else if (go.CompareTag("Tower") || !newTower)
+            } else if (go.CompareTag("Tower"))
             {
                 position = oldPos;
             } else
@@ -112,6 +112,7 @@ public class TowerPlacement : MonoBehaviour
 
             placedTower = null;
             placingTower = false;
+            placingNewTower = false;
         }
     }
 }
