@@ -11,6 +11,13 @@ public class TowerSpawner : MonoBehaviour
     [SerializeField] private List<GameObject> towers = new List<GameObject>();
     //[SerializeField] private Button m_YourFirstButton, m_YourSecondButton, m_YourThirdButton;
 
+    private TowerPlacement placement;
+
+    private void Start()
+    {
+        placement = GetComponent<TowerPlacement>();
+    }
+
     public void SpawnTower()
     {
         int index = UnityEngine.Random.Range(0,towers.Count);
@@ -18,6 +25,8 @@ public class TowerSpawner : MonoBehaviour
         GameObject spawnedTower = Instantiate(throwTower,spawnPoint.position,Quaternion.identity);
         
         spawnedTower.GetComponent<TowerGrenade>().towerPrefab = tower;
+
+        placement.SetTower(tower);
 
         Debug.Log("spawned " + tower.name + towers.Count);
     }
