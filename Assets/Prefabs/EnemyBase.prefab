@@ -358,6 +358,7 @@ MonoBehaviour:
   maxHealth: 100
   isDead: 0
   currentHealth: 0
+  healthbar: {fileID: 8201887886841730250}
   healthbarFill: {fileID: 6850282878906150798}
   ghostHealth: 0
 --- !u!114 &2676496738486995770

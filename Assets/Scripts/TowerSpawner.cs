@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class TowerSpawner : MonoBehaviour
 {
+    [SerializeField] private GameObject waveWonUi;
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private GameObject throwTower;
     [SerializeField] private List<GameObject> towers = new List<GameObject>();
@@ -27,6 +28,8 @@ public class TowerSpawner : MonoBehaviour
         spawnedTower.GetComponent<TowerGrenade>().towerPrefab = tower;
 
         placement.SetTower(tower);
+
+        waveWonUi.SetActive(false);
 
         Debug.Log("spawned " + tower.name + towers.Count);
     }

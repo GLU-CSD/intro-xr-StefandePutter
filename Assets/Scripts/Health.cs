@@ -11,6 +11,7 @@ public class Health : MonoBehaviour, IDamageable
     [HideInInspector] public bool isDead; // if incoming damage is enough to kill enemy isDead
 
     public float currentHealth;
+    [SerializeField] internal Image healthbar;
     [SerializeField] internal Image healthbarFill;
 
     private void Start()
@@ -18,6 +19,12 @@ public class Health : MonoBehaviour, IDamageable
         currentHealth = maxHealth;
         isDead = false;
         UpdateHealthBar();
+    }
+
+    private void Update()
+    {
+        Transform trans = Camera.main.transform;
+        healthbar.gameObject.transform.LookAt(trans.position);
     }
 
     public void TakeDamage(float amount)
