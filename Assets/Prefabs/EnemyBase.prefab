@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 880724057955209654}
   - component: {fileID: 5707892783034699426}
   - component: {fileID: 6850282878906150798}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: HealthbarFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 1573026809972340070}
   - component: {fileID: 353150996193199865}
   - component: {fileID: 8201887886841730250}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: HealthBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 6936253033188150640}
   - component: {fileID: 2759857060016362363}
   - component: {fileID: 6430289420440412210}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 3562152896038659308}
   - component: {fileID: 3100314582197919314}
   - component: {fileID: 7677290662867083666}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: EnemyBase
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -406,7 +406,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 200
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -441,6 +441,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f3e3a05cf47384587be645cd972fcc2a, type: 3}
       propertyPath: m_Name
       value: TB_Soldier_Mage
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f3e3a05cf47384587be645cd972fcc2a, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: f3e3a05cf47384587be645cd972fcc2a, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f3e3a05cf47384587be645cd972fcc2a, type: 3}
       propertyPath: m_LocalPosition.x

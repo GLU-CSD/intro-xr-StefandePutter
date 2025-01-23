@@ -11,11 +11,17 @@ public class TowerPlacement : MonoBehaviour
     [SerializeField] private XRRayInteractor m_RayInteractor;
     [SerializeField] private Material unsetMat;
     [SerializeField] private GameObject tower;
+    private GameManager gameManager;
     private GameObject placedTower;
     private Material TowerMat;
     private Vector3 oldPos;
     private bool placingTower;
     private bool placingNewTower;
+
+    private void Start()
+    {
+        gameManager = GetComponent<GameManager>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -55,6 +61,11 @@ public class TowerPlacement : MonoBehaviour
 
     public void Replace(SelectExitEventArgs args)
     {
+        if (gameManager.gameActive)
+        {
+            return;
+        }
+
         GameObject go = args.interactableObject.transform.gameObject;
         if (go.CompareTag("Tower"))
         {

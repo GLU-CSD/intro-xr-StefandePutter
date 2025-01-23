@@ -5,17 +5,22 @@ using UnityEngine;
 public class ObjectSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject objectToSpawn;
+    [SerializeField] private GameManager gameManager;
     [SerializeField] private float spawnInterval = 5f;
     private float lastSpawnTime;
 
     // Update is called once per frame
     void Update()
     {
-        if (Time.time >= lastSpawnTime + spawnInterval)
+        if (gameManager.gameActive)
         {
-            SpawnObject();
-            lastSpawnTime = Time.time;
+            if (Time.time >= lastSpawnTime + spawnInterval)
+            {
+                SpawnObject();
+                lastSpawnTime = Time.time;
+            }
         }
+
     }
 
     void SpawnObject()

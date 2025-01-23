@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private bool gameActive = true;
+    public bool gameActive = false;
     private int score = 0;
     private float scoreTimer = 0f; // Timer om score te verhogen
 
@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
 
     // UI die getoond wordt bij game over
     [SerializeField] private GameObject gameOverUI;
+    [SerializeField] private GameObject startRoundUI;
+    [SerializeField] private GameObject roundWonUI;
 
     private void Start()
     {
@@ -34,6 +36,7 @@ public class GameManager : MonoBehaviour
                 scoreText.text = "Score: " + score;
                 scoreTimer = 0f; // Reset de timer
             }
+                
         }
     }
 
@@ -58,6 +61,12 @@ public class GameManager : MonoBehaviour
 
         // Toon de Game Over UI
         gameOverUI.SetActive(true);
+    }
+
+    public void StartRound()
+    {
+        gameActive = true;
+        startRoundUI.SetActive(false);
     }
 
     public void RestartGame()

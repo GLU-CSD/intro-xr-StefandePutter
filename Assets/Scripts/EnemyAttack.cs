@@ -36,6 +36,7 @@ public class EnemyAttack : MonoBehaviour
         if (baseHealth != null && Time.time >= lastAttackTime + attackCooldown)
         {
             baseHealth.TakeDamage(damageAmount);
+            Destroy(gameObject);
             lastAttackTime = Time.time;
             //Debug.Log(this.name + "attacked the base!");
         }

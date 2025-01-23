@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class TowerSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject waveWonUi;
-    [SerializeField] private Transform spawnPoint;
-    [SerializeField] private GameObject throwTower;
+    //[SerializeField] private Transform spawnPoint;
+    //[SerializeField] private GameObject throwTower;
     [SerializeField] private List<GameObject> towers = new List<GameObject>();
     //[SerializeField] private Button m_YourFirstButton, m_YourSecondButton, m_YourThirdButton;
 
@@ -19,13 +19,15 @@ public class TowerSpawner : MonoBehaviour
         placement = GetComponent<TowerPlacement>();
     }
 
-    public void SpawnTower()
+    public void SpawnTower(GameObject tower)
     {
-        int index = UnityEngine.Random.Range(0,towers.Count);
-        GameObject tower = towers[index];
-        GameObject spawnedTower = Instantiate(throwTower,spawnPoint.position,Quaternion.identity);
+        // old way of doing it keeping it here to showcase
+
+        //int index = UnityEngine.Random.Range(0,towers.Count);
+        //GameObject tower = towers[index];
+        //GameObject spawnedTower = Instantiate(throwTower,spawnPoint.position,Quaternion.identity);
         
-        spawnedTower.GetComponent<TowerGrenade>().towerPrefab = tower;
+        //spawnedTower.GetComponent<TowerGrenade>().towerPrefab = tower;
 
         placement.SetTower(tower);
 

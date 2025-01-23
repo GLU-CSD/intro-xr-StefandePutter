@@ -7,7 +7,7 @@ public class EnemyMovement : MonoBehaviour
 {
     private NavMeshAgent agent;
     private Health health;
-    private Transform playerTransform;
+    private Transform baseTransform;
 
     void Start()
     {
@@ -19,16 +19,16 @@ public class EnemyMovement : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag("Base");
         if (player != null)
         {
-            playerTransform = player.transform;
+            baseTransform = player.transform;
         }
     }
 
     void Update()
     {
         // Beweeg naar de positie van de speler als deze is gevonden
-        if (playerTransform != null && !health.isDead)
+        if (baseTransform != null && !health.isDead)
         {
-            agent.SetDestination(playerTransform.position);
+            agent.SetDestination(baseTransform.position);
         }
     }
 }
