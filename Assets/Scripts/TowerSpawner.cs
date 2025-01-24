@@ -32,7 +32,5 @@ public class TowerSpawner : MonoBehaviour
         placement.SetTower(tower);
 
         waveWonUi.SetActive(false);
-
-        Debug.Log("spawned " + tower.name + towers.Count);
     }
 }

@@ -7,8 +7,13 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public bool gameActive = false;
+    private bool roundSpawner = false;
     private int score = 0;
     private float scoreTimer = 0f; // Timer om score te verhogen
+
+    [SerializeField] public GameObject spawnpoint;
+    [SerializeField] private List<GameObject> EnemySpawnpoints;
+    public List<GameObject> enemies;
 
     // UI om de score te laten zien
     [SerializeField] private TextMeshProUGUI scoreText;
@@ -36,7 +41,26 @@ public class GameManager : MonoBehaviour
                 scoreText.text = "Score: " + score;
                 scoreTimer = 0f; // Reset de timer
             }
-                
+
+            if (score < 20f)
+            {
+                EnemySpawnpoints[1].SetActive(true);
+            }
+
+            if (score != 0 && score % 10 == 0)
+            {
+                endRound();
+            }
+
+            EnemyHealth enemy = FindFirstObjectByType<EnemyHealth>();
+            if (!roundSpawner && enemy == null)
+            {
+                Debug.Log("Round ended");
+                roundWonUI.SetActive(true);
+                startRoundUI.SetActive(true);
+                gameActive = false;
+            }
+
         }
     }
 
@@ -63,10 +87,25 @@ public class GameManager : MonoBehaviour
         gameOverUI.SetActive(true);
     }
 
+    private void endRound()
+    {
+        foreach (GameObject spawner in EnemySpawnpoints)
+        {
+            spawner.GetComponent<ObjectSpawner>().spawnInterval = Mathf.Infinity;
+        }
+        roundSpawner = false;
+    }
+
     public void StartRound()
     {
         gameActive = true;
+        roundSpawner = true;    
         startRoundUI.SetActive(false);
+
+        foreach (GameObject spawner in EnemySpawnpoints)
+        {
+            spawner.GetComponent<ObjectSpawner>().spawnInterval = 0.5f;
+        }
     }
 
     public void RestartGame()

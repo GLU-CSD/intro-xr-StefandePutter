@@ -6,7 +6,7 @@ public class ObjectSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject objectToSpawn;
     [SerializeField] private GameManager gameManager;
-    [SerializeField] private float spawnInterval = 5f;
+    [SerializeField] public float spawnInterval = 5f;
     private float lastSpawnTime;
 
     // Update is called once per frame
@@ -27,7 +27,7 @@ public class ObjectSpawner : MonoBehaviour
     {
         if (objectToSpawn != null)
         {
-            Instantiate(objectToSpawn, transform.position, transform.rotation);
+            gameManager.enemies.Add(Instantiate(objectToSpawn, transform.position, transform.rotation));
         }
         else
         {

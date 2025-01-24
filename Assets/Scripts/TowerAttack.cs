@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class TowerAttack : MonoBehaviour
 {
-    [SerializeField] private float fireRate = 1f;
-    [SerializeField] private float damage = 50f;
+    [SerializeField] public float fireRate = 1f;
+    [SerializeField] public float damage = 50f;
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private Transform firePoint;
     [SerializeField] private bool fireFirstEnemy = false;
