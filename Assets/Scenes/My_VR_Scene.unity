@@ -6847,10 +6847,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1678946612685032798, guid: 9c5bcce4ce965344da6f51e008ab8cf1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6320153292023311214, guid: 9c5bcce4ce965344da6f51e008ab8cf1, type: 3}
       propertyPath: m_Name
       value: Tower (1)
@@ -6895,10 +6891,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7112166587565965543, guid: 9c5bcce4ce965344da6f51e008ab8cf1, type: 3}
-      propertyPath: projectilePrefab
-      value: 
-      objectReference: {fileID: 3870876025372762211, guid: e6ae88fe918155c478dc57edd2297324, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
